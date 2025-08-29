@@ -51,7 +51,7 @@ cat<<ende
 Das docker-compose.yml und die .env liegen in: $WDIR
 Die Media-Dateien lieen in: $UPLD
 
-Führe nun folgende Befehle ausführen:
+Führe nun folgende Befehle aus:
   
     => cd $WDIR
     => docker compose up -d
