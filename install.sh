@@ -10,7 +10,7 @@ echo Dort sollte sollte genung Speicherplatz zur Verfügung stehen.
 read -p 'Das Upload-Verzeicnis bitte: ' UPLD
 echo ""
 echo Für Deuschland "Europe/Berlin" 
-read -p 'Die Zeit Zone bitte:' TZN
+read -p 'Die Zeit Zone bitte: ' TZN
 read -p 'Irgendein Datenbank-Passwort bitte: ' DBPASSWD
 
 #sudo mkdir $WDIR; sudo chown $USER: $WDIR;
