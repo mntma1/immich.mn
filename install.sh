@@ -23,15 +23,12 @@ cat<<ende
 =================================================================================================
 
 Das docker-compose.yml liegt in: $WDIR
-Die Uploads liegen in: $UPLD
-Die Zeit Zone ist: $TZN
-Das DB-Passwort lautet: $DBPASSWD
-
-!!Das Passwort brauchst du dir nicht zu merken, es dient nur zur sicheren Verbindung zur DB
 
 Führe nun folgende Befehle ausführen:
   
     => cd $WDIR
+    => nano .env
+    
     => docker compose up -d
 
 Login: http://$(hostname -I | awk '{print $1}' | cut -d/ -f1):2283
