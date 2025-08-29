@@ -1,7 +1,6 @@
 # Kommt bald
 
-<img width="960" height="185" alt="immich-logo-inline-light" src="https://github.com/user-attachments/assets/a940796e-5c04-4f3b-beff-9e305763b9dc" />
-
+![upscaled-2x-immich-thumb](https://github.com/user-attachments/assets/66f8ec65-08e8-4d0f-b38e-5fcedcb96a0e)
 
 
 immich [Quick-Start](https://immich.app/docs/overview/quick-start)
