@@ -6,11 +6,13 @@ cat<<anfang
 Hier das lokale Arbeits-Verzeichnis eintragen(Ohne / am Ende!). 
 Zum Beispiel: /opt/immich oder auch ~/immich
 anfang
-
+echo Hier liegen dann die docker-compose Datein-
+echo
 read -p 'Das Arbeiits-Verzeichnis bitte: ' WDIR
 echo
 echo Hier werden die Media Dateien abgelegt(Hier sollte genung Speicherplatz zur Verfügung stehen!).
-read -p 'Das upload-Verzeicnis bitte: ' UPLD
+read -p 'Das Upload-Verzeicnis bitte: ' UPLD
+read -p 'Die Zeit Zone(für Deuschland: Europe/Berlin) bitte:' TZN
 
 #sudo mkdir $WDIR; sudo chown $USER: $WDIR;
 #cp -fv .env example.env docker-compose.yml $WDIR
@@ -19,8 +21,14 @@ read -p 'Das upload-Verzeicnis bitte: ' UPLD
 clear
 
 cat<<ende
+=================================================================================================
+
 Das docker-compose File liegt in: $WDIR
-Das Uplod-Verzeichnis ist: $UPLD 
+Das Media Dateien werden in: $UPLD abgespeichert. 
+
+$EDIR erstellt
+$UPLD erstellt
+Die Zeit Zone ist: $TZN
 
 Nun folgende Befehle ausführen:
 
@@ -38,6 +46,8 @@ anpassen und das Docker-Image bauen.
 Login: http://$(hostname -I | awk '{print $1}' | cut -d/ -f1):2283
  
  ........Viel Spaß :)
+
+=================================================================================================
 ende
 
 
