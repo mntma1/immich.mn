@@ -2,13 +2,26 @@
 # Created by Manfred - 29.08.2025 05:28 Uhr
 
 clear
-echo Hier ein lokales Verzeichnis oder ein Mountpoint eintragen(ohne / am Ende!)
-read -p 'Das Arbeiits-Verzeichnis bitte: ' WDIR 
+cat<<anfang
+Hier das lokale Arbeits-Verzeichnis eintragen(Ohne / am Ende!). 
+Zum Beispiel: /opt/immich oder auch ~/immich
+anfang
+
+read -p 'Das Arbeiits-Verzeichnis bitte: ' WDIR
+echo
+echo Hier werden die Media Dateien abgelegt(Hier sollte genung Speicherplatz zur Verfügung stehen!).
+read -p 'Das upload-Verzeicnis bitte: ' UPLD
+
 #sudo mkdir $WDIR; sudo chown $USER: $WDIR;
-#cp -fv .env docker-compose.yml install.sh $WDIR
+#cp -fv .env example.env docker-compose.yml $WDIR
+#sudo mkdir $UPLD; sudo chown $USER: $UPLD;
+
 clear
 
 cat<<ende
+Das docker-compose File liegt in: $WDIR
+Das Uplod-Verzeichnis ist: $UPLD 
+
 Nun folgende Befehle ausführen:
 
 In der Datei: $WDIR/.env
