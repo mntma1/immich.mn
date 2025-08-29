@@ -13,9 +13,9 @@ echo Für Deuschland "Europe/Berlin"
 read -p 'Die Zeit Zone bitte: ' TZN
 read -p 'Irgendein Datenbank-Passwort bitte: ' DBPASSWD
 
-#sudo mkdir $WDIR; sudo chown $USER: $WDIR;
-#cp -fv .env example.env docker-compose.yml $WDIR
-#sudo mkdir $UPLD; sudo chown $USER: $UPLD;
+sudo mkdir $WDIR; sudo chown $USER: $WDIR;
+cp -fv .env example.env docker-compose.yml $WDIR
+sudo mkdir $UPLD; sudo chown $USER: $UPLD;
 
 clear
 
@@ -29,10 +29,9 @@ Das DB-Passwort lautet: $DBPASSWD
 
 !!Das Passwort brauchst du dir nicht zu merken, es dient nur zur sicheren Verbindung zur DB
 
-Nun folgende Befehle ausführen:
+Führe nun folgende Befehle ausführen:
   
     => cd $WDIR
-    => nano $WDIR/.env
     => docker compose up -d
 
 Login: http://$(hostname -I | awk '{print $1}' | cut -d/ -f1):2283
