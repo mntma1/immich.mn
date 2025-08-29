@@ -22,15 +22,12 @@ clear
 cat<<ende
 =================================================================================================
 
-Das docker-compose File liegt in: $WDIR
-Das Media Dateien sind dann in: $UPLD 
-
-Docher Files in: $WDIR
-Uploads iN: $UPLD
+Das docker-compose.yml liegt in: $WDIR
+Die Uploads liegen in: $UPLD
 Die Zeit Zone ist: $TZN
-Das DB-Passwortlautet: $DBPASSWD
+Das DB-Passwort lautet: $DBPASSWD
 
-!!Das Passwort brauchst du dir nicht zu merken, eendient nur zur sichern Verbindung zur DB
+!!Das Passwort brauchst du dir nicht zu merken, es dient nur zur sicheren Verbindung zur DB
 
 Nun folgende Befehle ausführen:
   
