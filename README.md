@@ -1,16 +1,15 @@
-# Kommt bald
-
 ![upscaled-2x-immich-thumb](https://github.com/user-attachments/assets/66f8ec65-08e8-4d0f-b38e-5fcedcb96a0e)
 
+Blogbeitrag von Jusec https://jusec.me/immich - immich [Quick-Start](https://immich.app/docs/overview/quick-start)
 
-immich [Quick-Start](https://immich.app/docs/overview/quick-start)
 
-1. Hallo Test
+1. Das Repository herunterladen
 ```
-Das ist der Test
+git clonehttps://github.com/mntma1/immich.mn.git
 ```
 
-2. Noch ein Test
+2. Das Installation-Script abfeuern
 ```
-Das ist auch ein Test
+cd immich.mn
+./install.sh
 ```
