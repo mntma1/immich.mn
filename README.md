@@ -5,7 +5,7 @@ Blogbeitrag von Jusec https://jusec.me/immich - immich [Quick-Start](https://imm
 
 1. Das Repository herunterladen
 ```
-git clonehttps://github.com/mntma1/immich.mn.git
+git clone https://github.com/mntma1/immich.mn.git
 ```
 
 2. Das Installation-Script abfeuern
