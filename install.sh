@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# Created by Manfred - 28.08.2025 05:28 Uhr
+# Created by Manfred - 29.08.2025 05:28 Uhr
+
 clear
-read -p 'Das Arbeiits Verzeichnis bitte: ' WDIR 
-#sudo mkdir $UDIR; sudo chown $USER: $UDIR;
+echo Hier ein lokales Verzeichnis oder ein Mountpoint eintragen(ohne / am Ende!)
+read -p 'Das Arbeiits-Verzeichnis bitte: ' WDIR 
+#sudo mkdir $WDIR; sudo chown $USER: $WDIR;
 #cp -fv .env docker-compose.yml install.sh $WDIR
 clear
 
@@ -20,8 +22,9 @@ anpassen und das Docker-Image bauen.
     => nano $WDIR/.env
     => docker compose up -d
 
+Login: http://$(hostname -I | awk '{print $1}' | cut -d/ -f1):2283
+ 
  ........Viel Spaß :)
-
 ende
 
 
