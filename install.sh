@@ -7,22 +7,17 @@ read -p 'Das Arbeiits Verzeichnis bitte: ' WDIR
 clear
 
 cat<<ende
-  Das Arbeits Verzeichnis ist: $WDIR
+Nun folgende Befehle ausführen:
 
-   In der Datei: $WDIR/.env
+In der Datei: $WDIR/.env
 
-      UPLOAD_LOCATION=
+      UPLOAD_LOCATION=/lokales/Upload/Verzeichnis # ohne / am Ende
+      DB_PASSWORD=einSicherEsPassw0rd # [a-zA-Z, 0-9] ohne Lücken, keine Sonderzechen
 
-      und
-
-      DB_PASSWORD=
-
-  anpassen und das Docker-Image bauen.
-    
+anpassen und das Docker-Image bauen.
+  
     => cd $WDIR
-
     => nano $WDIR/.env
-
     => docker compose up -d
 
  ........Viel Spaß :)
