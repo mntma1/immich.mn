@@ -3,7 +3,7 @@
 
 clear
 echo Hier liegt dann die docker-compose.yml Datei.
-read -p 'Wo soll das docker-compose.yml hin?: ' WDIR
+read -p 'Wo sollen das docker-compose.yml und das .env hin?: ' WDIR
 echo ""
 echo Hier werden die Media-Dateien abgelegt.
 echo Dort sollte sollte genung Speicherplatz zur Verfügung stehen.
@@ -12,11 +12,12 @@ read -p 'Das Upload-Verzeicnis bitte: ' UPLD
 echo ""
 echo Für Deuschland "Europe/Berlin" 
 read -p 'Die Zeit Zone bitte: ' TZN
+echo Nur`A-Za-z0-9` ohne Lücken oder Sonderzeichen 
 read -p 'Irgendein Datenbank-Passwort bitte: ' DBPASSWD
 
-sudo mkdir -pv $WDIR; sudo chown -v $USER: $WDIR;
-cp -fv example.env docker-compose.yml $WDIR
-sudo mkdir -pv $UPLD; sudo chown -v $USER: $UPLD;
+sudo mkdir -p $WDIR; sudo chown $USER: $WDIR;
+cp -f example.env docker-compose.yml $WDIR
+sudo mkdir -p $UPLD; sudo chown $USER: $UPLD;
 
 PGDIR=$WDIR/postgres
 cat<<dotenvf >$WDIR/.env
@@ -47,7 +48,8 @@ dotenvf
 cat<<ende
 =================================================================================================
 
-Das docker-compose.yml liegt in: $WDIR
+Das docker-compose.yml und die .env liegen in: $WDIR
+Die Media-Dateien lieen in: $UPLD
 
 Führe nun folgende Befehle ausführen:
   
@@ -55,8 +57,8 @@ Führe nun folgende Befehle ausführen:
     => docker compose up -d
 
 Login: http://$(hostname -I | awk '{print $1}' | cut -d/ -f1):2283
- 
- ........Viel Spaß :)
+
+........Viel Spaß :)
 
 =================================================================================================
 ende
