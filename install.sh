@@ -14,10 +14,23 @@ read -p 'Die Zeit Zone bitte: ' TZN
 read -p 'Irgendein Datenbank-Passwort bitte: ' DBPASSWD
 
 sudo mkdir $WDIR; sudo chown $USER: $WDIR;
-cp -fv .env example.env docker-compose.yml $WDIR
+cp -fv example.env docker-compose.yml $WDIR
 sudo mkdir $UPLD; sudo chown $USER: $UPLD;
+touch $WDIR/.env
 
 clear
+
+echo<<dotenv>>$WDIR/.env
+UPLOAD_LOCATION=$UPLD
+DB_DATA_LOCATION=$WDIR/postgres
+TZ=$TZN
+IMMICH_VERSION=releas
+DB_PASSWORD=$DBPASSWD
+DB_USERNAME=postgres
+DB_DATABASE_NAME=immich
+DB_USERNAME=postgres
+DB_DATABASE_NAME=immich
+dotenv
 
 cat<<ende
 =================================================================================================
@@ -27,8 +40,15 @@ Das docker-compose.yml liegt in: $WDIR
 Führe nun folgende Befehle ausführen:
   
     => cd $WDIR
+  
+    Die .env anpassen
     => nano .env
-    
+    UPLOAD_LOCATION=
+    UPLOAD_LOCATION= # Das Medien Verzeichnis
+    DB_DATA_LOCATION=$WDIR/postgres # Datenbank Verzeichnis
+    TZ=$TZN # Die Zeitzone z.B.: Europe/Berlin
+    IMMICH_VERSION=release
+    DB_PASSWORD=$DBPASSWD
     => docker compose up -d
 
 Login: http://$(hostname -I | awk '{print $1}' | cut -d/ -f1):2283
