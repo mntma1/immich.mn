@@ -16,16 +16,17 @@ read -p 'Irgendein Datenbank-Passwort bitte: ' DBPASSWD
 
 sudo mkdir -pv $WDIR; sudo chown -v $USER: $WDIR;
 cp -fv example.env docker-compose.yml $WDIR
-sudo mkdir -p $UPLD; sudo chown -v $USER: $UPLD;
+sudo mkdir -pv $UPLD; sudo chown -v $USER: $UPLD;
 
+PGDIR=$WDIR/postgres
 cat<<dotenvf >$WDIR/.env
 # You can find documentation for all the supported env variables at https://immich.app/docs/install/environment-variables
  
 # The location where your uploaded files are stored
-UPLOAD_LOCATION=./library
+UPLOAD_LOCATION=$UPLD
  
 # The location where your database files are stored. Network shares are not supported for the database
-DB_DATA_LOCATION=$UPLD
+DB_DATA_LOCATION=$PGDIR
  
 # To set a timezone, uncomment the next line and change Etc/UTC to a TZ identifier from this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 TZ=$TZN
