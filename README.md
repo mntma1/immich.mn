@@ -38,7 +38,7 @@ cd immich.mn
 ```
 => Irgendein Datenbank-Passwort bitte: ap8veinai1pi
 ```
-*Generieren mit:* "pwgen -A -n 12". *Oder denkt euch eins aus, aber ohne Lücken und ohne Sonderzeichen* -> **[a-zA-Z,0-9]**
+*Generieren mit:* "pwgen -A -n 12". *Oder denkt euch eins aus, aber ohne Lücken und ohne Sonderzeichen* -> [a-zA-Z,0-9]
 
 
 > [!CAUTION]
