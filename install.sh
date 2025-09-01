@@ -12,8 +12,9 @@ read -p 'Das Upload-Verzeicnis bitte: ' UPLD
 echo ""
 echo Für Deuschland "Europe/Berlin" 
 read -p 'Die Zeit Zone bitte: ' TZN
-echo Nur`A-Za-z0-9` ohne Lücken oder Sonderzeichen 
-read -p 'Irgendein Datenbank-Passwort bitte: ' DBPASSWD
+# ---> Das Passwort wird nun mit 'pwgen' erzeugt <---
+#echo Nur`A-Za-z0-9` ohne Lücken oder Sonderzeichen 
+#read -p 'Irgendein Datenbank-Passwort bitte: ' DBPASSWD
 
 sudo mkdir -p $WDIR; sudo chown $USER: $WDIR;
 cp -f example.env docker-compose.yml $WDIR
@@ -37,7 +38,7 @@ IMMICH_VERSION=release
  
 # Connection secret for postgres. You should change it to a random password
 # Please use only the characters `A-Za-z0-9`, without special characters or spaces
-DB_PASSWORD=$DBPASSWD
+DB_PASSWORD=$(pwgen -A -n 12)
  
 # The values below this line do not need to be changed
 ###################################################################################
