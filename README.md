@@ -1,6 +1,7 @@
-![upscaled-2x-immich-thumb](https://github.com/user-attachments/assets/66f8ec65-08e8-4d0f-b38e-5fcedcb96a0e)
+<img width="3038" height="742" alt="immich-logo-inline-light" src="https://github.com/user-attachments/assets/cdd9c540-9352-41ca-8eec-da3318c77063" />
 
 Blogbeitrag von Jusec https://jusec.me/immich - immich [Quick-Start](https://immich.app/docs/overview/quick-start)
+
 
 
 1. Das Repository herunterladen
