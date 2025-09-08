@@ -20,8 +20,8 @@ read -p 'Irgendein Datenbank-Passwort bitte: ' DBPASSWD
 # Dazu mus aber pwgen installiert sein. => sudo  apt install pwgen
 
 sudo mkdir -p $WDIR; sudo chown $USER: $WDIR;
-cp -f example.env docker-compose.yml $WDIR
 sudo mkdir -p $UPLD; sudo chown $USER: $UPLD;
+cp -f example.env docker-compose.yml $WDIR
 
 PGDIR=$WDIR/postgres
 cat<<dotenvf >$WDIR/.env
