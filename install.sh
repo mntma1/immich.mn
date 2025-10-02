@@ -11,6 +11,7 @@ echo z.B.: /home/immichUpload
 read -p 'Das Upload-Verzeicnis bitte: ' UPLD
 echo ""
 echo Für Deuschland "Europe/Berlin" 
+echo Für dir Schweiz "Europe/Zurich" 
 read -p 'Die Zeit Zone bitte: ' TZN
 echo ""
 echo Nur [A-Za-z,0-9], Ohne Lücken oder Sonderzeichen
