@@ -11,7 +11,7 @@ echo z.B.: /home/immichUpload oder /mnt/ssd
 read -p 'Das Upload-Verzeicnis bitte: ' UPLD
 echo
 echo Für Deuschland "Europe/Berlin" 
-echo Für dir Schweiz "Europe/Zurich" 
+echo Für dir Schweiz "Europe/Zurich"
 read -p 'Die Zeit Zone bitte: ' TZN
 echo
 echo Nur [A-Za-z,0-9], Ohne Lücken oder Sonderzeichen
@@ -37,7 +37,7 @@ DB_DATA_LOCATION=$PGDIR
 TZ=$TZN
  
 # The Immich version to use. You can pin this to a specific version like "v1.71.0"
-IMMICH_VERSION="v2.0.1"
+IMMICH_VERSION="v2.1.0"
  
 # Connection secret for postgres. You should change it to a random password
 # Please use only the characters `A-Za-z0-9`, without special characters or spaces
