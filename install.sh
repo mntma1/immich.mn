@@ -2,23 +2,22 @@
 # Created by Manfred - 29.08.2025 05:28 Uhr
 
 clear
-echo Hier liegt dann die docker-compose.yml Datei. Bei mir ligt das immer unter: /opt/immich-app
+echo Hier liegt dann die docker-compose.yml Datei. Bei mir liegt das immer unter: /opt/immich-app
 read -p 'Wo soll das docker-compose.yml und das .env hin?: ' WDIR
-echo ""
+echo
 echo Hier werden die Media-Dateien abgelegt.
 echo Dort sollte sollte genung Speicherplatz zur Verfügung stehen.
-echo z.B.: /home/immichUpload
+echo z.B.: /home/immichUpload oder /mnt/ssd
 read -p 'Das Upload-Verzeicnis bitte: ' UPLD
-echo ""
+echo
 echo Für Deuschland "Europe/Berlin" 
 echo Für dir Schweiz "Europe/Zurich" 
 read -p 'Die Zeit Zone bitte: ' TZN
-echo ""
+echo
 echo Nur [A-Za-z,0-9], Ohne Lücken oder Sonderzeichen
 echo Das lässt sich gut mit: pwgen -A -n 16 erzeugen.
+echo 'Dazu muss pwgen installiert sein. => sudo  apt install pwgen'
 read -p 'Irgendein Datenbank-Passwort bitte: ' DBPASSWD
-# Oder mit nun mit: => DB_PASSWORD=$(pwgen -A -n 12) <= erzeugen 
-# Dazu mus aber pwgen installiert sein. => sudo  apt install pwgen
 
 sudo mkdir -p $WDIR; sudo chown $USER: $WDIR;
 sudo mkdir -p $UPLD; sudo chown $USER: $UPLD;
